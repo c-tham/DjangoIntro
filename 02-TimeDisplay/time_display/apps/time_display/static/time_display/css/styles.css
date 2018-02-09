@@ -1,0 +1,15 @@
+/* * {
+    outline: 1px dotted red;
+} */
+#container {
+    width: 800px;
+    margin: 0px auto;
+    text-align: center;
+}
+#display_box {
+    width: 400px;
+    padding: 10px;
+    border: 1px solid black;
+    margin: 0px auto;
+    text-align: center;
+}

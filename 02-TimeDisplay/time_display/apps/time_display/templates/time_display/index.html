@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Time Display at Django</title>
+    {% load static %}
+    <!-- The line above tells Django to be ready to listen for static files -->
+    <link rel="stylesheet" href="{% static 'time_display/css/styles.css' %}" media="screen" title="no title"  charset="utf-8">
+    <!-- Put the static files in the static folder inside your app. -->
+    <!-- Django collects files within all static folders and puts them within a single folder -->
+</head>
+<body>
+    <div id="container">
+        <p>The current date and time in UTC:</p>
+        <div id="display_box">
+            <h1>{{date}}</h1>
+            <h1>{{time}}</h1>
+        </div>
+    </div>
+</body>
+</html>
