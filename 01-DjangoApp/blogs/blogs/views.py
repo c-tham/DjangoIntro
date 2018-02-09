@@ -13,14 +13,14 @@ def create(request):
     response = "(3) ## create ##"
     return redirect('/')
 
-def show(request):
-    response = "(4) placeholder to SHOW blog {{number}}"
+def show(request, num):
+    response = "(4) placeholder to SHOW blog at {}.".format(num)
     return HttpResponse(response)
 
-def edit(request):
-    response = "(5) placeholder to EDIT blog {{number}}"
+def edit(request, num):
+    response = "(5) placeholder to EDIT blog at {}.".format(num)
     return HttpResponse(response)
 
-def destroy(request):
+def destroy(request, num):
     response = "(6) ## destroy ##"
     return redirect('/')

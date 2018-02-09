@@ -24,7 +24,7 @@ urlpatterns = [
     url(r'^$',views.index),                 ### added
     url(r'^new$',views.new),                ### added
     url(r'^create$',views.create),          ### added
-    url(r'^\d+$',views.show),               ### added
-    url(r'^\d+/edit$',views.edit),          ### added
-    url(r'^\d+/delete$',views.destroy),          ### added
+    url(r'^(?P<num>\d+)$',views.show),               ### added
+    url(r'^(?P<num>\d+)/edit$',views.edit),          ### added
+    url(r'^(?P<num>\d+)/delete$',views.destroy),     ### added
 ]
