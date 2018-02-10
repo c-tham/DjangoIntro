@@ -2,9 +2,12 @@
 #*************************************************************
 #* Welcome to Django folder and files readiness script
 #* Created by Chia Tham. Copyright 2018.02.10
+#* 
+#* V1.00 - Initial 
+#* V1.01 - Fixed the styles.css code in the index.html file
 #*************************************************************
 echo "*************************************************************"
-echo "Welcome to Django folders and files readiness Version 1.00"
+echo "Welcome to Django folders and files readiness Version 1.01"
 printf "Enter the project name: "
 read pname
 echo "*************************************************************"
@@ -82,7 +85,7 @@ then
     echo '    <title></title>' >> $pname/apps/$pname/templates/$pname/index.html
     echo '    {% load static %}' >> $pname/apps/$pname/templates/$pname/index.html
     echo '    <!-- The line above tells Django to be ready to listen for static files -->' >> $pname/apps/$pname/templates/$pname/index.html
-    echo `    <link rel="stylesheet" href="{% static '$pname'/css/styles.css %}" media="screen" title="no title"  charset="utf-8">` >> $pname/apps/$pname/templates/$pname/index.html
+    echo "    <link rel='stylesheet' href='{% static '"$pname"/css/styles.css' %}' media='screen' title='no title'  charset='utf-8'>" >> $pname/apps/$pname/templates/$pname/index.html
     echo '    <!-- Put the static files in the static folder inside your app. -->' >> $pname/apps/$pname/templates/$pname/index.html
     echo '    <!-- Django collects files within all static folders and puts them within a single folder --> ' >> $pname/apps/$pname/templates/$pname/index.html
     echo '</head>' >> $pname/apps/$pname/templates/$pname/index.html
@@ -114,6 +117,7 @@ then
     echo ">python manage.py migrate"
     python manage.py migrate 
     echo "*************************************************************"
+    echo "*************************************************************"
     #******************************
     echo "** Insert codes below into "$pname"/settings.py"
     echo "INSTALLED_APPS = ["
@@ -126,6 +130,7 @@ then
     echo "urlpatterns = ["
     echo "    url(r'^', include('apps."$pname".urls')), ### add this line"
     echo "]"
+    echo "*************************************************************"
     echo "*************************************************************"
     #******************************
     echo "** Execute Django"
