@@ -1,0 +1,101 @@
+/* * {
+    outline: 1px dotted red;
+} */
+#container {
+    width: 970px;
+    margin: 0px auto;
+}
+#wrapper {
+    width: 450px;
+    margin: 0px auto;
+    border: 1px solid black;
+}
+#col-left {
+    width: 150px;
+    margin: 0px;
+    padding: 10px;
+    display: inline-block;
+    vertical-align: top;
+    border-right: 1px solid black;
+}
+#col-right {
+    width: 250px;
+    margin: 7px 0px 0px;
+    padding: 10px;
+    display: inline-block;
+    vertical-align: top;
+    /* border-left: 1px solid black; */
+}
+form p {
+    margin: 10px 0px 0px;
+}
+input[type=text] {
+    margin-left: 20px;
+}
+input[type=text] p {
+    margin: 10px 0px;
+}
+input[type=radio] {
+    margin-left: 20px;
+}
+h1 {
+    text-align: center;
+}
+#col-left input[type=submit] {
+    background-color: darkblue;
+    color: white;
+}
+#col-right input[type=submit] {
+    background-color: darkmagenta;
+    color: white;
+    float: right;
+}
+#activities {
+    text-align: left;
+    margin: 20px 0px 0px;
+}
+.list_normal {
+    color: black;
+    font-size: 10px;
+    width: auto;
+    display: inline-block;
+}
+.list_red_normal {
+    color: red;
+    font-size: 10px;
+    width: auto;
+    display: inline-block;
+}
+.list_green_normal {
+    color: green;
+    font-size: 10px;
+    width: auto;
+    display: inline-block;
+}
+.list_blue_normal {
+    color: blue;
+    font-size: 10px;
+    width: auto;
+    display: inline-block;
+}
+.list_red_large  {
+    color: red;
+    font-size: 18px;
+    width: auto;
+    display: inline-block;
+}
+.list_green_large  {
+    color: green;
+    font-size: 18px;
+    width: auto;
+    display: inline-block;
+}
+.list_blue_large  {
+    color: blue;
+    font-size: 18px;
+    width: auto;
+    display: inline-block;
+}
+#col-right p {
+    margin: 0px;
+}

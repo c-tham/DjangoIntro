@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Session Words</title>
+    {% load static %}
+    <!-- The line above tells Django to be ready to listen for static files -->
+    <link rel='stylesheet' href='{% static 'session_words/css/styles.css' %}' media='screen' title='no title'  charset='utf-8'>
+    <!-- Put the static files in the static folder inside your app. -->
+    <!-- Django collects files within all static folders and puts them within a single folder --> 
+</head>
+<body>
+    <div id="container">
+        <div id="wrapper">
+            <h1>Welcome to {{name}} app!</h1>
+            <div id="col-left">
+                <form action="/add_word" method="post">
+                    {% csrf_token %}
+                    <p>Add a new word</p>
+                    <input type='text' name='word'>
+                    <p>Choose color:</p>
+                    <input type="radio" name="color" value="red" checked>Red<br>
+                    <input type="radio" name="color" value="green">Green<br>
+                    <input type="radio" name="color" value="blue">Blue<br>
+                    <p></p>
+                    <input type="hidden" name="size" value="normal" checked>
+                    <input type="checkbox" name="size" value="large">Show in BIG fonts!<br>
+                    <p></p>
+                    <input type="submit" value="Add to Session">
+                </form>
+            </div>
+            <div id="col-right">
+                <form action="/clear" method="post">
+                    {% csrf_token %}
+                    <input type="submit" value="Clear Session">
+                </form>
+                <div id="activities">
+                    {% for x in request.session.word_list %}
+                        <p><div class="list_{{x.color}}_{{x.size}}">{{x.word}}&nbsp;</div><div class="list_normal">&nbsp;- added on {{x.datetime}}</div></p>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
