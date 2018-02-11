@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{{name}}</title>
+    {% load static %}
+    <!-- The line above tells Django to be ready to listen for static files -->
+    <link rel='stylesheet' href='{% static 'amadon/css/styles.css' %}' media='screen' title='no title'  charset='utf-8'>
+    <!-- Put the static files in the static folder inside your app. -->
+    <!-- Django collects files within all static folders and puts them within a single folder --> 
+</head>
+<body>
+    <div id="container">
+        <h1>{{name}} store!</h1>
+        <p></p>
+        <h3>Thank you for your business!</h3>
+        <p></p>
+        <p>We charged your credit card for X</p>
+        <p></p>
+        <p>You have ordered X items so far and spent X with {{name}}.com!</p>
+        <p></p>
+        <a href="/">Go Back</a>
+    </div>
+</body>
+</html>
