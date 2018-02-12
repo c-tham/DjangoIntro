@@ -22,12 +22,15 @@
                 <td>Dojo T-shirt</td>
                 <td>$19.99</td>
                 <td>
-                    <form action="/buy">
+                    <form action="/buy" method="post">
+                        {% csrf_token %}
                         <select name="qty" id="qty">
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
                         </select>
+                        <input type='hidden' name='price' value='19.99'>
+                        <input type='hidden' name='product_id' value='101'>
                         <input type="submit" value="Buy">
                     </form>
                 </td>
@@ -36,12 +39,15 @@
                 <td>Dojo Sweater</td>
                 <td>$29.99</td>
                 <td>
-                    <form action="/buy">
+                    <form action="/buy" method="post">
+                        {% csrf_token %}
                         <select name="qty" id="qty">
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
                         </select>
+                        <input type='hidden' name='price' value='29.99'>
+                        <input type='hidden' name='product_id' value='102'>
                         <input type="submit" value="Buy">
                     </form>
                 </td>
@@ -50,12 +56,15 @@
                 <td>Dojo Cup</td>
                 <td>$4.99</td>
                 <td>
-                    <form action="/buy">
+                    <form action="/buy" method="post">
+                        {% csrf_token %}
                         <select name="qty" id="qty">
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
                         </select>
+                        <input type='hidden' name='price' value='4.99'>
+                        <input type='hidden' name='product_id' value='103'>
                         <input type="submit" value="Buy">
                     </form>
                 </td>
@@ -64,18 +73,20 @@
                     <td>Dojo Algorithm Book</td>
                     <td>$49.99</td>
                     <td>
-                        <form action="/buy">
+                        <form action="/buy" method="post">
+                            {% csrf_token %}
                             <select name="qty" id="qty">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
                             </select>
+                            <input type='hidden' name='price' value='49.99'>
+                            <input type='hidden' name='product_id' value='104'>
                             <input type="submit" value="Buy">
                         </form>
                     </td>
                 </tr>
         </table>
     </div>
-    
 </body>
 </html>
