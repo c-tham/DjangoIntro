@@ -9,4 +9,5 @@ urlpatterns = [
     url(r'^blogs/(?P<num>\d+)$',views.show),
     url(r'^blogs/(?P<num>\d+)/edit$',views.edit),
     url(r'^blogs/(?P<num>\d+)/delete$',views.destroy),
+    url(r'^html$',views.html),
 ]

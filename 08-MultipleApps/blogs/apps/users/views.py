@@ -1,10 +1,10 @@
 from django.shortcuts import render, HttpResponse, redirect
 
-# def index(request):
-#     context = {
-#         "name" : "users"
-#     }
-#     return render(request, "users/index.html", context)
+def html(request):
+    context = {
+        "name" : "users"
+    }
+    return render(request, "users/index.html", context)
 
 def index(request):
     response = "USERS (1) placeholder to later display all the list of users"

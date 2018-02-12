@@ -1,10 +1,10 @@
 from django.shortcuts import render, HttpResponse, redirect
 
-# def index0(request):
-#     context = {
-#         "name" : "blogs"
-#     }
-#     return render(request, "blogs/index.html", context)
+def html(request):
+    context = {
+        "name" : "blogs"
+    }
+    return render(request, "blogs/index.html", context)
 
 def index(request):
     response = "BLOGS (1) placeholder to later display all the list of blogs"
