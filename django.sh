@@ -5,9 +5,11 @@
 #* 
 #* V1.00 - Initial 
 #* V1.01 - Fixed the styles.css code in the index.html file
+#* V1.02 - Display the codes (urls.py & views.py)
+#*       - Add name to html title
 #*************************************************************
 echo "*************************************************************"
-echo "Welcome to Django folders and files readiness Version 1.01"
+echo "Welcome to Django folders and files readiness Version 1.02"
 printf "Enter the project name: "
 read pname
 echo "*************************************************************"
@@ -65,6 +67,7 @@ then
     echo '        "name" : "'$pname'"' >> $pname/apps/$pname/views.py
     echo '    }' >> $pname/apps/$pname/views.py
     echo '    return render(request, "'$pname'/index.html", context)' >> $pname/apps/$pname/views.py
+    cat $pname/apps/$pname/views.py
     echo "*************************************************************"
     #******************************
     echo "** templates folders"
@@ -82,7 +85,7 @@ then
     echo '<html>' >> $pname/apps/$pname/templates/$pname/index.html
     echo '<head>' >> $pname/apps/$pname/templates/$pname/index.html
     echo '    <meta charset="utf-8">' >> $pname/apps/$pname/templates/$pname/index.html
-    echo '    <title></title>' >> $pname/apps/$pname/templates/$pname/index.html
+    echo '    <title>{{name}}</title>' >> $pname/apps/$pname/templates/$pname/index.html
     echo '    {% load static %}' >> $pname/apps/$pname/templates/$pname/index.html
     echo '    <!-- The line above tells Django to be ready to listen for static files -->' >> $pname/apps/$pname/templates/$pname/index.html
     echo "    <link rel='stylesheet' href='{% static '"$pname"/css/styles.css' %}' media='screen' title='no title'  charset='utf-8'>" >> $pname/apps/$pname/templates/$pname/index.html
@@ -93,6 +96,7 @@ then
     echo '    <h1>Hello {{name}} app!</h1>' >> $pname/apps/$pname/templates/$pname/index.html
     echo '</body>' >> $pname/apps/$pname/templates/$pname/index.html
     echo '</html>' >> $pname/apps/$pname/templates/$pname/index.html
+    cat $pname/apps/$pname/templates/$pname/index.html
     echo "*************************************************************"
     #******************************
     echo "** static CSS folder"
